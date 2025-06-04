@@ -15,5 +15,5 @@ jobs:
     - name: Run Docker Build
       run: |
         ls -la
-        docker build -t minha-imagem:1.0 -t minha-imagem:latest -f Dockerfile.base .
+        docker build -t hunkoraboni/minha-imagem:1.0 -t hunkoraboni/minha-imagem:latest -f Dockerfile.base .
         docker push --all-tags ghcr.io/hunkoraboni/minha-imagem
