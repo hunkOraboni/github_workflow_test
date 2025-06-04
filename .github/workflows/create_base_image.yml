@@ -7,6 +7,8 @@ jobs:
   create-base-image:
     name: Create Base Image
     runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ secrets.GH_CLI }}
     steps:
     - name: checkout current repo
       uses: actions/checkout@v4
