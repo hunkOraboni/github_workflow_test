@@ -1,4 +1,4 @@
-FROM ghcr.io/hunkoraboni/minha_imagem:latest
+FROM ghcr.io/hunkoraboni/minha-imagem:latest
 
 RUN id
 RUN whoami
