@@ -8,7 +8,12 @@ jobs:
     name: Create Base Image
     runs-on: ubuntu-24.04
     steps:
+    - name: checkout current repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Run Docker Build
       run: |
-          docker build -t minha-imagem:1.0 -t minha-imagem:latest -f Dockerfile.base .
-          docker push --all-tags ghcr.io/hunkOraboni/minha-imagem
+        ls -la
+        docker build -t minha-imagem:1.0 -t minha-imagem:latest -f Dockerfile.base .
+        docker push --all-tags ghcr.io/hunkOraboni/minha-imagem
