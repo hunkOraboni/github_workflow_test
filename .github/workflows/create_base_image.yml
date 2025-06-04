@@ -16,4 +16,4 @@ jobs:
       run: |
         ls -la
         docker build -t minha-imagem:1.0 -t minha-imagem:latest -f Dockerfile.base .
-        docker push --all-tags ghcr.io/hunkOraboni/minha-imagem
+        docker push --all-tags ghcr.io/hunkoraboni/minha-imagem
