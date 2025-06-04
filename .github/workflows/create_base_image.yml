@@ -1,0 +1,14 @@
+name: Create Base Image
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-base-image:
+    name: Create Base Image
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Run Docker Build
+      run: |
+          docker build -t minha-imagem:1.0 -t minha-imagem:latest -f Dockerfile.base .
+          docker push --all-tags ghcr.io/hunkOraboni/minha-imagem
